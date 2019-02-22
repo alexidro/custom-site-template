@@ -8,9 +8,9 @@ WP_VERSION=`get_config_value 'wp_version' 'latest'`
 WP_TYPE=`get_config_value 'wp_type' "single"`
 DB_NAME=`get_config_value 'db_name' "${VVV_SITE_NAME}"`
 DB_NAME=${DB_NAME//[\\\/\.\<\>\:\"\'\|\?\!\*-]/}
-DB_PREFIX=`get_config_value 'db_prefix' "${DB_PREFIX}"`
-ADMIN_USERNAME=`get_config_value 'admin_username' "${ADMIN_USERNAME}"`
-ADMIN_EMAIL=`get_config_value 'admin_email' "${ADMIN_EMAIL}"`
+DB_PREFIX=`get_config_value 'db_prefix' 'wp_'`
+ADMIN_USERNAME=`get_config_value 'admin_username' 'admin'`
+ADMIN_EMAIL=`get_config_value 'admin_email' 'admin@local.test'`
 
 # Make a database, if we don't already have one
 echo -e "\nCreating database '${DB_NAME}' (if it's not already there)"
